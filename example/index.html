@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Web Based App</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<link rel="stylesheet" href="example.css" />
+	<link rel="stylesheet" href="../dist/leaflet.loader.css" />
+	
+	<script src="leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="./leaflet/Leaflet.Legend-master/leaflet-legend.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+
+	
+	<script src="../dist/leaflet.loader.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+
+	<script src="../Data/grp1.js"></script>
+<script src="../Data//grp2.js"></script>
+<script src="../Data//grp3.js"></script>
+<script src="../Data//grp4.js"></script>
+<script src="../Data//grp5.js"></script>
+<script src="../Data//grp6.js"></script>
+<script src="../Data//grp7.js"></script>
+<script src="../Data//grp8.js"></script>
+<script src="../Data//grp9.js"></script>
+</head>
+<body>
+	<div id="map" style="top:0px;left:0px;right:0px; bottom: 0px; position: absolute; height:100%;"></div>
+
+	<script>
+
+
+// map.remove();
+// map.invalidateSize();
+// map = map.remove()
+
+
+
+		var map = L.map('map').setView([51.505, -0.09], 13);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+
+		var loader = L.control.loader().addTo(map);
+		setTimeout(function (){loader.hide();},5000);
+
+		map.off();
+        map.remove();
+
+
+var newmap = L.map('map').setView([40.758480, -111.888138],13);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href=”http://osm.org/copyright”>OpenStreetMap</a> contributors'
+}).addTo(newmap);
+
+
+function polystyle(feature) {
+    return {
+        fillColor: 'orange',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle2(feature) {
+    return {
+        fillColor: '641E16 ',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle3(feature) {
+    return {
+        fillColor: '#512E5F',
+         weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle4(feature) {
+    return {
+        fillColor: '#0E6251',
+         weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle5(feature) {
+    return {
+        fillColor: '#7D6608',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle6(feature) {
+    return {
+        fillColor: '#7D6608',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.5
+    };
+}
+function polystyle7(feature) {
+    return {
+        fillColor: '#873600',
+        weight: 5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+
+
+
+
+// Jeojson Data Layers
+
+
+ L.geoJson(data,{style: polystyle}).addTo(newmap);
+ L.geoJson(data3,{style: polystyle}).addTo(newmap);
+ L.geoJson(data4,{style: polystyle2}).addTo(newmap);
+ //L.geoJson(data5,{style: polystyle3}).addTo(newmap);
+ L.geoJson(data6,{style: polystyle4}).addTo(newmap);
+ L.geoJson(data7,{style: polystyle5}).addTo(newmap);
+ L.geoJson(data8,{style: polystyle6}).addTo(newmap);
+
+
+
+</script>
+</body>
+</html>

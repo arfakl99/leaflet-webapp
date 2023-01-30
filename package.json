@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "leaflet-legend": "^1.0.2"
+  }
+}
