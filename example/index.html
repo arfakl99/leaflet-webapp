@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="leaflet/leaflet.css" />
 	<link rel="stylesheet" href="example.css" />
 	<link rel="stylesheet" href="../dist/leaflet.loader.css" />
-	
+	<!-- <link rel="stylesheet" href="./leaflet/legend/leaflet-legend.css" /> -->
+   <link rel="stylesheet" href="/example/leaflet/legend/leaflet-legend.css">
 	<script src="leaflet/leaflet.js"></script>
-    <script type="text/javascript" src="./leaflet/Leaflet.Legend-master/leaflet-legend.js"></script>
+    
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
 
@@ -19,15 +20,21 @@
 	<script src="../dist/leaflet.loader.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 
-	<script src="../Data/grp1.js"></script>
+	<!-- <script src="../Data/grp1.js"></script>
 <script src="../Data//grp2.js"></script>
 <script src="../Data//grp3.js"></script>
 <script src="../Data//grp4.js"></script>
-<script src="../Data//grp5.js"></script>
+<script src="../Data//grp5.js"></script> -->
 <script src="../Data//grp6.js"></script>
 <script src="../Data//grp7.js"></script>
-<script src="../Data//grp8.js"></script>
+<!-- <script src="../Data//grp8.js"></script>
 <script src="../Data//grp9.js"></script>
+<script src="../Data//grp10.js"></script>
+<script src="../Data//grp11.js"></script>
+<script src="../Data//grp12.js"></script>
+<script src="../Data//grp13.js"></script>
+<script src="../Data//grp14.js"></script>
+<script src="../Data//grp15.js"></script> -->
 </head>
 <body>
 	<div id="map" style="top:0px;left:0px;right:0px; bottom: 0px; position: absolute; height:100%;"></div>
@@ -41,7 +48,7 @@
 
 
 
-		var map = L.map('map').setView([51.505, -0.09], 13);
+		var map = L.map('map').setView([51.505, -0.09], 16);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
@@ -54,10 +61,11 @@
         map.remove();
 
 
-var newmap = L.map('map').setView([40.758480, -111.888138],13);
+var newmap = L.map('map').setView([40.58434876774032, -111.92217334813512],14);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href=”http://osm.org/copyright”>OpenStreetMap</a> contributors'
 }).addTo(newmap);
+
 
 
 function polystyle(feature) {
@@ -71,7 +79,7 @@ function polystyle(feature) {
 }
 function polystyle2(feature) {
     return {
-        fillColor: '641E16 ',
+        fillColor: 'red ',
         weight: 0.5,
         opacity: 1,
         color: 'white',  //Outline color
@@ -107,7 +115,7 @@ function polystyle5(feature) {
 }
 function polystyle6(feature) {
     return {
-        fillColor: '#7D6608',
+        fillColor: '#333300',
         weight: 0.5,
         opacity: 1,
         color: 'white',  //Outline color
@@ -117,7 +125,79 @@ function polystyle6(feature) {
 function polystyle7(feature) {
     return {
         fillColor: '#873600',
-        weight: 5,
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle8(feature) {
+    return {
+        fillColor: '#ff0080',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle9(feature) {
+    return {
+        fillColor: '#ff0000',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle10(feature) {
+    return {
+        fillColor: '#0040ff',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle11(feature) {
+    return {
+        fillColor: '#00ff80',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle12(feature) {
+    return {
+        fillColor: '#00ff00',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle13(feature) {
+    return {
+        fillColor: '#ffff00',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle14(feature) {
+    return {
+        fillColor: '#ffbf00',
+        weight: 0.5,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
+    };
+}
+function polystyle15(feature) {
+    return {
+        fillColor: '#ff0000',
+        weight: 0.5,
         opacity: 1,
         color: 'white',  //Outline color
         fillOpacity: 0.7
@@ -125,19 +205,53 @@ function polystyle7(feature) {
 }
 
 
+var legend = L.control({ position: "bottomleft" });
+
+legend.onAdd = function(map) {
+  var div = L.DomUtil.create("div", "legend");
+  div.innerHTML += "<h4>Legend</h4>";
+  div.innerHTML += '<i style="background: #477AC2"></i><span>Group1:Oldest(1800)</span><br>';
+  div.innerHTML += '<i style="background: #ff0000"></i><span>Group15:Recent(2021)</span><br>';
+ 
+  
+//   div.innerHTML += '<i style="background: #E6E696"></i><span>Land</span><br>';
+//   div.innerHTML += '<i style="background: #E8E6E0"></i><span>Residential</span><br>';
+//   div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
+//   div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+  
+  
+
+  return div;
+};
+
+legend.addTo(newmap);
 
 
 // Jeojson Data Layers
 
 
- L.geoJson(data,{style: polystyle}).addTo(newmap);
- L.geoJson(data3,{style: polystyle}).addTo(newmap);
- L.geoJson(data4,{style: polystyle2}).addTo(newmap);
- //L.geoJson(data5,{style: polystyle3}).addTo(newmap);
- L.geoJson(data6,{style: polystyle4}).addTo(newmap);
- L.geoJson(data7,{style: polystyle5}).addTo(newmap);
- L.geoJson(data8,{style: polystyle6}).addTo(newmap);
+//  L.geoJson(data2,{style: polystyle}).addTo(newmap);
+//  L.geoJson(data3,{style: polystyle3}).addTo(newmap);
+//  L.geoJson(data4,{style: polystyle4}).addTo(newmap);
+//  L.geoJson(data5,{style: polystyle5}).addTo(newmap);
+ L.geoJson(data6,{style: polystyle6}).addTo(newmap);
+ L.geoJson(data7,{style: polystyle7}).addTo(newmap);
+//  L.geoJson(data8,{style: polystyle8}).addTo(newmap);
+//  L.geoJson(data9,{style: polystyle9}).addTo(newmap);
+//  L.geoJson(data10,{style: polystyle10}).addTo(newmap);
+//  L.geoJson(data11,{style: polystyle11}).addTo(newmap);
+//  L.geoJson(data12,{style: polystyle12}).addTo(newmap);
+//  L.geoJson(data13,{style: polystyle13}).addTo(newmap);
+//  L.geoJson(data14,{style: polystyle14}).addTo(newmap);
+//  L.geoJson(data15,{style: polystyle15}).addTo(newmap);
 
+
+
+//  var layerGroup = L.geoJSON(data7, {
+//   onEachFeature: function (feature, layer) {
+//     layer.bindPopup('<h1>'+feature.properties.OBJECTID+'</h1><p>name: '+feature.properties.OBJECTID+'</p>');
+//   }
+// }).addTo(map);
 
 
 </script>
