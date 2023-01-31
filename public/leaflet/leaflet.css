@@ -118,7 +118,7 @@
 	}
 .leaflet-control {
 	float: left;
-	clear: both;
+	/* clear: both; */
 	}
 .leaflet-right .leaflet-control {
 	float: right;

@@ -25,7 +25,7 @@
     <script src="../Data//grp2.js"></script>
     <script src="../Data//grp3.js"></script>
     <script src="../Data//grp4.js"></script>
-    <script src="../Data//grp5.js"></script>
+    <!-- <script src="../Data//grp5.js"></script>
     <script src="../Data//grp6.js"></script>
     <script src="../Data//grp7.js"></script>
     <script src="../Data//grp8.js"></script>
@@ -35,7 +35,7 @@
     <script src="../Data//grp12.js"></script>
     <script src="../Data//grp13.js"></script>
     <script src="../Data//grp14.js"></script>
-    <script src="../Data//grp15.js"></script>    
+    <script src="../Data//grp15.js"></script>     -->
   </head>
   <body>
     <div
@@ -55,6 +55,8 @@
       // map.invalidateSize();
       // map = map.remove()
 
+
+    
       var map = L.map("map").setView([51.505, -0.09], 16);
       L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
         attribution:
@@ -218,17 +220,62 @@
 
       legend.onAdd = function (map) {
         var div = L.DomUtil.create("div", "legend");
-        div.innerHTML += "<h4>Legend</h4>";
+        div.innerHTML += "<h4>Year Built</h4>";
         div.innerHTML +=
-          '<i style="background: #FFA500"></i><span>Group1:Oldest(1800)</span><br>';
+          '<i style="background: orange"></i><span>1800-1850</span><br>';
         div.innerHTML +=
-          '<i style="background: #ff0000"></i><span>Group15:Recent(2021)</span><br>';
+          '<i style="background: red"></i><span>1850-1910</span><br>';
+        div.innerHTML +=
+          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
+        div.innerHTML +=
+          '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
+        div.innerHTML +=
+          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
+        div.innerHTML +=
+          '<i style="background: #333300"></i><span>1967-1974</span><br>';
+        div.innerHTML +=
+          '<i style="background: #873600"></i><span>1974-1978</span><br>';
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+      
+        return div;
+      };
 
-        //   div.innerHTML += '<i style="background: #E6E696"></i><span>Land</span><br>';
-        //   div.innerHTML += '<i style="background: #E8E6E0"></i><span>Residential</span><br>';
-        //   div.innerHTML += '<i style="background: #FFFFFF"></i><span>Ice</span><br>';
-        //   div.innerHTML += '<i class="icon" style="background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/194515-200.png);background-repeat: no-repeat;"></i><span>Grænse</span><br>';
+      legend.addTo(newmap);
+      var legend = L.control({ position: "bottomleft" });
 
+      legend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "legend2");
+        div.innerHTML += "<h4>Year Built</h4>";
+        div.innerHTML +=
+          '<i style="background: orange"></i><span>1800-1850</span><br>';
+        div.innerHTML +=
+          '<i style="background: red"></i><span>1850-1910</span><br>';
+        div.innerHTML +=
+          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
+        div.innerHTML +=
+          '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
+        div.innerHTML +=
+          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
+        div.innerHTML +=
+          '<i style="background: #333300"></i><span>1967-1974</span><br>';
+        div.innerHTML +=
+          '<i style="background: #873600"></i><span>1974-1978</span><br>';
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+      
         return div;
       };
 
