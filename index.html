@@ -216,6 +216,41 @@
         };
       }
 
+
+
+      
+      var legend = L.control({ position: "bottomleft" });
+
+      legend.onAdd = function (map) {
+        var div = L.DomUtil.create("div", "legend2");
+        // div.innerHTML += "<h4>Year Built</h4>";
+        div.innerHTML +=
+          '<i style="background: orange"></i><span>1800-1850</span><br>';
+        div.innerHTML +=
+          '<i style="background: red"></i><span>1850-1910</span><br>';
+        div.innerHTML +=
+          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
+        div.innerHTML +=
+          '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
+        div.innerHTML +=
+          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
+        div.innerHTML +=
+          '<i style="background: #333300"></i><span>1967-1974</span><br>';
+        div.innerHTML +=
+          '<i style="background: #873600"></i><span>1974-1978</span><br>';
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          
+        div.innerHTML +=
+          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+      
+        return div;
+      };
+
+      legend.addTo(newmap);
       var legend = L.control({ position: "bottomleft" });
 
       legend.onAdd = function (map) {
@@ -248,38 +283,7 @@
       };
 
       legend.addTo(newmap);
-      var legend = L.control({ position: "bottomleft" });
-
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend2");
-        div.innerHTML += "<h4>Year Built</h4>";
-        div.innerHTML +=
-          '<i style="background: orange"></i><span>1800-1850</span><br>';
-        div.innerHTML +=
-          '<i style="background: red"></i><span>1850-1910</span><br>';
-        div.innerHTML +=
-          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
-        div.innerHTML +=
-          '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
-        div.innerHTML +=
-          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
-        div.innerHTML +=
-          '<i style="background: #333300"></i><span>1967-1974</span><br>';
-        div.innerHTML +=
-          '<i style="background: #873600"></i><span>1974-1978</span><br>';
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
-          
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
-          
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
       
-        return div;
-      };
-
-      legend.addTo(newmap);
 
       // Jeojson Data Layers
 
