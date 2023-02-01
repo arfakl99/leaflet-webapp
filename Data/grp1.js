@@ -1,4 +1,4 @@
-   var data= 
+   var data1= 
     {
     "type": "FeatureCollection",
     "name": "grp1",

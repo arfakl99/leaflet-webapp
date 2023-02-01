@@ -12,8 +12,18 @@ body,
 }
 
 /*Legend specific*/
+.leaflet-bottom leaflet-left{
+  background-color: white;
+}
+
+.legend2 leaflet-control{
+  margin-left: 20px;
+}
+
 .legend {
+  
   padding: 6px 8px;
+  margin-top: 140px;
   font: 14px Arial, Helvetica, sans-serif;
   background: white;
   background: rgba(255, 255, 255, 0.8);
@@ -51,6 +61,8 @@ body,
 .legend2 {
   
   padding: 6px 8px;
+  margin-top: 150px;
+  margin-left: -50px;
   font: 14px Arial, Helvetica, sans-serif;
   background: white;
   background: rgba(255, 255, 255, 0.8);

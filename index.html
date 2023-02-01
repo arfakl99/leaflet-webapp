@@ -21,10 +21,10 @@
       src="https://unpkg.com/default-passive-events"
     ></script>
 
-    <script src="../Data/grp1.js"></script>
-    <script src="../Data//grp2.js"></script>
+     <script src="../Data/grp1.js"></script>
+   <!-- <script src="../Data//grp2.js"></script>
     <script src="../Data//grp3.js"></script>
-    <script src="../Data//grp4.js"></script>
+    <script src="../Data//grp4.js"></script> -->
     <!-- <script src="../Data//grp5.js"></script>
     <script src="../Data//grp6.js"></script>
     <script src="../Data//grp7.js"></script>
@@ -34,8 +34,8 @@
     <script src="../Data//grp11.js"></script>
     <script src="../Data//grp12.js"></script>
     <script src="../Data//grp13.js"></script>
-    <script src="../Data//grp14.js"></script>
-    <script src="../Data//grp15.js"></script>     -->
+    <script src="../Data//grp14.js"></script>-->
+    <script src="../Data//grp15.js"></script>     
   </head>
   <body>
     <div
@@ -100,7 +100,7 @@
       }
       function polystyle3(feature) {
         return {
-          fillColor: "#512E5F",
+          fillColor: "#ffff00",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -118,7 +118,7 @@
       }
       function polystyle5(feature) {
         return {
-          fillColor: "#7D6608",
+          fillColor: "#996633",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -127,7 +127,7 @@
       }
       function polystyle6(feature) {
         return {
-          fillColor: "#333300",
+          fillColor: "#660066",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -136,7 +136,7 @@
       }
       function polystyle7(feature) {
         return {
-          fillColor: "#873600",
+          fillColor: "#cc6600",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -145,7 +145,7 @@
       }
       function polystyle8(feature) {
         return {
-          fillColor: "#ff0080",
+          fillColor: "#cc0000",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -154,7 +154,7 @@
       }
       function polystyle9(feature) {
         return {
-          fillColor: "#ff0000",
+          fillColor: "#000000",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -163,7 +163,7 @@
       }
       function polystyle10(feature) {
         return {
-          fillColor: "#0040ff",
+          fillColor: "#2b1f12",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -172,7 +172,7 @@
       }
       function polystyle11(feature) {
         return {
-          fillColor: "#660066",
+          fillColor: "#999966",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -181,7 +181,7 @@
       }
       function polystyle12(feature) {
         return {
-          fillColor: "#800000",
+          fillColor: "#00cc00",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -190,7 +190,7 @@
       }
       function polystyle13(feature) {
         return {
-          fillColor: "#993300",
+          fillColor: "#009933",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -199,7 +199,7 @@
       }
       function polystyle14(feature) {
         return {
-          fillColor: "#ff9900",
+          fillColor: "#993333",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -208,7 +208,7 @@
       }
       function polystyle15(feature) {
         return {
-          fillColor: "#ff0000",
+          fillColor: "#993366",
           weight: 0.5,
           opacity: 1,
           color: "white", //Outline color
@@ -225,27 +225,22 @@
         var div = L.DomUtil.create("div", "legend2");
         // div.innerHTML += "<h4>Year Built</h4>";
         div.innerHTML +=
-          '<i style="background: orange"></i><span>1800-1850</span><br>';
+          '<i style="background: #cc0000"></i><span>1800-1850</span><br>';
         div.innerHTML +=
-          '<i style="background: red"></i><span>1850-1910</span><br>';
+          '<i style="background: #000000"></i><span>1850-1910</span><br>';
         div.innerHTML +=
-          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
+          '<i style="background: #2b1f12"></i>1910-1949<span></span><br>';
         div.innerHTML +=
-          '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
+          '<i style="background: #999966"></i><span>1949-1959</span><br>';
         div.innerHTML +=
-          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
+          '<i style="background: #00cc00"></i><span>1959-1967</span><br>';
+          div.innerHTML +=
+          '<i style="background: #009933"></i><span>1967-1974</span><br>';
         div.innerHTML +=
-          '<i style="background: #333300"></i><span>1967-1974</span><br>';
-        div.innerHTML +=
-          '<i style="background: #873600"></i><span>1974-1978</span><br>';
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
-          
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
-          
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          '<i style="background: #993333"></i><span>1974-1978</span><br>';
+          div.innerHTML +=
+          '<i style="background: #993366"></i><span>1978-1983</span><br>';
+        
       
         return div;
       };
@@ -261,23 +256,19 @@
         div.innerHTML +=
           '<i style="background: red"></i><span>1850-1910</span><br>';
         div.innerHTML +=
-          '<i style="background: #512E5F"></i>1910-1949<span></span><br>';
+          '<i style="background: #ffff00"></i>1910-1949<span></span><br>';
         div.innerHTML +=
           '<i style="background: #0E6251"></i><span>1949-1959</span><br>';
         div.innerHTML +=
-          '<i style="background: #7D6608"></i><span>1959-1967</span><br>';
-        div.innerHTML +=
-          '<i style="background: #333300"></i><span>1967-1974</span><br>';
-        div.innerHTML +=
-          '<i style="background: #873600"></i><span>1974-1978</span><br>';
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          '<i style="background: #996633"></i><span>1959-1967</span><br>';
+          div.innerHTML +=
+          '<i style="background: #660066"></i><span>1978-1983</span><br>';
           
         div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+          '<i style="background: #cc6600"></i><span>1978-1983</span><br>';
           
-        div.innerHTML +=
-          '<i style="background: #ff0080"></i><span>1978-1983</span><br>';
+       
+        
       
         return div;
       };
@@ -287,26 +278,120 @@
 
       // Jeojson Data Layers
 
-      L.geoJson(data2, { style: polystyle2 }).addTo(newmap);
-      L.geoJson(data3, { style: polystyle3 }).addTo(newmap);
-      L.geoJson(data4, { style: polystyle4 }).addTo(newmap);
-      L.geoJson(data5, { style: polystyle5 }).addTo(newmap);
-      L.geoJson(data6, { style: polystyle6 }).addTo(newmap);
-      L.geoJson(data7, { style: polystyle7 }).addTo(newmap);
-      L.geoJson(data8, { style: polystyle8 }).addTo(newmap);
-      L.geoJson(data9, { style: polystyle9 }).addTo(newmap);
-      L.geoJson(data10, { style: polystyle10 }).addTo(newmap);
-      L.geoJson(data11, { style: polystyle11 }).addTo(newmap);
-      L.geoJson(data12, { style: polystyle12 }).addTo(newmap);
-      L.geoJson(data13, { style: polystyle13 }).addTo(newmap);
-      L.geoJson(data14, { style: polystyle14 }).addTo(newmap);
-      L.geoJson(data15, { style: polystyle15 }).addTo(newmap);
+      // L.geoJson(data2, { style: polystyle2 }).addTo(newmap);
+      // L.geoJson(data3, { style: polystyle3 }).addTo(newmap);
+      // L.geoJson(data4, { style: polystyle4 }).addTo(newmap);
+      // L.geoJson(data5, { style: polystyle5 }).addTo(newmap);
+      // L.geoJson(data6, { style: polystyle6 }).addTo(newmap);
+      // L.geoJson(data7, { style: polystyle7 }).addTo(newmap);
+      // L.geoJson(data8, { style: polystyle8 }).addTo(newmap);
+      // L.geoJson(data9, { style: polystyle9 }).addTo(newmap);
+      // L.geoJson(data10, { style: polystyle10 }).addTo(newmap);
+      // L.geoJson(data11, { style: polystyle11 }).addTo(newmap);
+      // L.geoJson(data12, { style: polystyle12 }).addTo(newmap);
+      // L.geoJson(data13, { style: polystyle13 }).addTo(newmap);
+      // L.geoJson(data14, { style: polystyle14 }).addTo(newmap);
+      L.geoJson(data1,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle
+      }).addTo(newmap);
+      L.geoJson(data2,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle2
+      }).addTo(newmap);
+      L.geoJson(data3,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle3
+      }).addTo(newmap);
+      L.geoJson(data4,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle4
+      }).addTo(newmap);
+      L.geoJson(data5,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle5
+      }).addTo(newmap);
 
-      //  var layerGroup = L.geoJSON(data7, {
-      //   onEachFeature: function (feature, layer) {
-      //     layer.bindPopup('<h1>'+feature.properties.OBJECTID+'</h1><p>name: '+feature.properties.OBJECTID+'</p>');
-      //   }
-      // }).addTo(map);
+      L.geoJson(data6,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle6
+      }).addTo(newmap);
+
+      L.geoJson(data7,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle7
+      }).addTo(newmap);
+
+      L.geoJson(data8,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle8
+      }).addTo(newmap);
+
+      L.geoJson(data9,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle9
+      }).addTo(newmap);
+
+      L.geoJson(data10,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle10
+      }).addTo(newmap);
+
+      L.geoJson(data11,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle11
+      }).addTo(newmap);
+
+      L.geoJson(data12,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle12
+      }).addTo(newmap);
+
+      L.geoJson(data13,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle13
+      }).addTo(newmap);
+
+      L.geoJson(data14,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle14
+      }).addTo(newmap);
+      L.geoJson(data15,{
+        onEachFeature: function(feature,layer){
+          layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
+        },
+        style: polystyle15
+      }).addTo(newmap);
+
+      
     </script>
   </body>
 </html>
