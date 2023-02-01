@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Leaflet Web Based App</title>
+    <title>Web app</title>
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,10 +22,10 @@
     ></script>
 
      <script src="../Data/grp1.js"></script>
-   <!-- <script src="../Data//grp2.js"></script>
+    <script src="../Data//grp2.js"></script>
     <script src="../Data//grp3.js"></script>
-    <script src="../Data//grp4.js"></script> -->
-    <!-- <script src="../Data//grp5.js"></script>
+    <script src="../Data//grp4.js"></script> 
+    <script src="../Data//grp5.js"></script>
     <script src="../Data//grp6.js"></script>
     <script src="../Data//grp7.js"></script>
     <script src="../Data//grp8.js"></script>
@@ -34,7 +34,7 @@
     <script src="../Data//grp11.js"></script>
     <script src="../Data//grp12.js"></script>
     <script src="../Data//grp13.js"></script>
-    <script src="../Data//grp14.js"></script>-->
+    <script src="../Data//grp14.js"></script>
     <script src="../Data//grp15.js"></script>     
   </head>
   <body>
@@ -225,21 +225,21 @@
         var div = L.DomUtil.create("div", "legend2");
         // div.innerHTML += "<h4>Year Built</h4>";
         div.innerHTML +=
-          '<i style="background: #cc0000"></i><span>1800-1850</span><br>';
+          '<i style="background: #cc0000"></i><span>1978-1983</span><br>';
         div.innerHTML +=
-          '<i style="background: #000000"></i><span>1850-1910</span><br>';
+          '<i style="background: #000000"></i><span>1983-1991</span><br>';
         div.innerHTML +=
-          '<i style="background: #2b1f12"></i>1910-1949<span></span><br>';
+          '<i style="background: #2b1f12"></i>1991-1996<span></span><br>';
         div.innerHTML +=
-          '<i style="background: #999966"></i><span>1949-1959</span><br>';
+          '<i style="background: #999966"></i><span>1996-2000</span><br>';
         div.innerHTML +=
-          '<i style="background: #00cc00"></i><span>1959-1967</span><br>';
+          '<i style="background: #00cc00"></i><span>2000-2005</span><br>';
           div.innerHTML +=
-          '<i style="background: #009933"></i><span>1967-1974</span><br>';
+          '<i style="background: #009933"></i><span>2005-2010</span><br>';
         div.innerHTML +=
-          '<i style="background: #993333"></i><span>1974-1978</span><br>';
+          '<i style="background: #993333"></i><span>2010-2017</span><br>';
           div.innerHTML +=
-          '<i style="background: #993366"></i><span>1978-1983</span><br>';
+          '<i style="background: #993366"></i><span>2021-2021</span><br>';
         
       
         return div;
@@ -262,10 +262,10 @@
         div.innerHTML +=
           '<i style="background: #996633"></i><span>1959-1967</span><br>';
           div.innerHTML +=
-          '<i style="background: #660066"></i><span>1978-1983</span><br>';
+          '<i style="background: #660066"></i><span>1978-1974</span><br>';
           
         div.innerHTML +=
-          '<i style="background: #cc6600"></i><span>1978-1983</span><br>';
+          '<i style="background: #cc6600"></i><span>1974-1978</span><br>';
           
        
         
@@ -279,18 +279,7 @@
       // Jeojson Data Layers
 
       // L.geoJson(data2, { style: polystyle2 }).addTo(newmap);
-      // L.geoJson(data3, { style: polystyle3 }).addTo(newmap);
-      // L.geoJson(data4, { style: polystyle4 }).addTo(newmap);
-      // L.geoJson(data5, { style: polystyle5 }).addTo(newmap);
-      // L.geoJson(data6, { style: polystyle6 }).addTo(newmap);
-      // L.geoJson(data7, { style: polystyle7 }).addTo(newmap);
-      // L.geoJson(data8, { style: polystyle8 }).addTo(newmap);
-      // L.geoJson(data9, { style: polystyle9 }).addTo(newmap);
-      // L.geoJson(data10, { style: polystyle10 }).addTo(newmap);
-      // L.geoJson(data11, { style: polystyle11 }).addTo(newmap);
-      // L.geoJson(data12, { style: polystyle12 }).addTo(newmap);
-      // L.geoJson(data13, { style: polystyle13 }).addTo(newmap);
-      // L.geoJson(data14, { style: polystyle14 }).addTo(newmap);
+     
       L.geoJson(data1,{
         onEachFeature: function(feature,layer){
           layer.bindPopup('<h3>GroupID: '+feature.properties.GroupID+'</h3><p>Year-Built: '+feature.properties.year_built+'</p><p>Total-Parcels: '+feature.properties.Parcels+'</p>')
